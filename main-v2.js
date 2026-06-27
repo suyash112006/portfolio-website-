@@ -586,6 +586,20 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCarousel();
             carouselInterval = setInterval(nextSlide, 4000);
         }
+        
+        if (detailsContainer) {
+            detailsContainer.addEventListener('click', (e) => {
+                if(e.target.closest('.case-study-gallery-btn')) {
+                    const btn = e.target.closest('.case-study-gallery-btn');
+                    try {
+                        const imgs = JSON.parse(btn.dataset.imgs.replace(/&quot;/g, '"'));
+                        if(imgs && imgs.length > 0) openImageModal(imgs);
+                    } catch(err) {
+                        console.error("Gallery Error:", err);
+                    }
+                }
+            });
+        }
     }
 
     let currentGalleryImages = [];
@@ -708,8 +722,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
 
                     <div class="case-study-actions">
-                        <a href="${data.demoUrl}" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
-                        <a href="${data.githubUrl}" target="_blank" class="btn btn-outline btn-sm"><i class="fa-brands fa-github"></i> Source Code</a>
+                        <button class="btn btn-primary btn-sm case-study-gallery-btn" data-imgs='${JSON.stringify(data.screenshots || []).replace(/"/g, "&quot;")}'>
+                            <i class="fa-solid fa-images"></i> View Project Gallery
+                        </button>
                     </div>
                 </div>
             `;
