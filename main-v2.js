@@ -246,11 +246,13 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinksContainer.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
     });
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navLinksContainer.classList.remove('active');
+            document.body.classList.remove('no-scroll');
         });
     });
 
