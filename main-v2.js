@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectData = [
         {
             title: "Trading Journal",
-            duration: "3 Months",
+            duration: "4 Weeks",
             desc: "Full Stack Trading Analytics Platform. A comprehensive trading analytics platform that helps traders track performance, replay charts, and make data-driven decisions.",
             problem: "Traders lacked a unified platform to backtest strategies, journal their trades, and analyze their performance metrics without using multiple disjointed tools.",
             solution: "Built a comprehensive full-stack analytics platform that integrates real-time chart replays, automated journaling, and deep performance insights into a single dashboard.",
@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: "Garage Manager",
-            duration: "2 Months",
+            duration: "4 Weeks",
             desc: "Garage Business Management System. A full business management system for garages — from customer onboarding to invoice generation and mechanic tracking.",
             problem: "Local garages were using paper-based tracking for vehicle repairs, leading to lost invoices, inefficient mechanic scheduling, and poor customer communication.",
             solution: "Developed an end-to-end SaaS application that digitalizes vehicle intake, automates invoice generation, and provides mechanics with a real-time job dashboard.",
@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: "Modern Landing Page",
-            duration: "3 Weeks",
+            duration: "1 Week",
             desc: "Responsive Business Landing Page. A conversion-optimised business landing page with professional design, fast load times, and a clear call-to-action hierarchy.",
             problem: "A client was experiencing high bounce rates and low lead generation due to an outdated, slow-loading, and non-responsive website.",
             solution: "Designed and developed a highly optimized, mobile-first landing page utilizing modern aesthetics, micro-animations, and strategic call-to-actions.",

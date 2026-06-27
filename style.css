@@ -2120,6 +2120,11 @@ body.no-scroll .navbar {
 }
 
 /* Case Study Section */
+@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 .case-study-box {
     margin-top: 60px;
     background: rgba(255,255,255,0.02);
@@ -2128,6 +2133,7 @@ body.no-scroll .navbar {
     padding: 40px;
     text-align: left;
     backdrop-filter: blur(10px);
+    animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .case-study-header {
     display: flex;
