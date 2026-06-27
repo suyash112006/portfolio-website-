@@ -36,6 +36,22 @@
             -ms-overflow-style: none !important;  /* IE and Edge */
             scrollbar-width: none !important;  /* Firefox */
         }
+        
+        /* Animated text gradient for name */
+        @keyframes colorFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .name-main {
+            background: linear-gradient(270deg, #60a5fa, #c084fc, #3b82f6, #60a5fa);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            animation: colorFlow 12s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>
@@ -211,28 +227,28 @@
 
                     <div class="about-highlights">
                         <div class="highlight-item">
-                            <div class="highlight-icon"><i class="fa-brands fa-html5"></i></div>
+                            <div class="highlight-icon"><i class="fa-brands fa-html5" style="color: #e34c26"></i></div>
                             <div>
                                 <strong>HTML / CSS / JavaScript</strong>
                                 <span>Pixel-perfect, responsive, hand-coded</span>
                             </div>
                         </div>
                         <div class="highlight-item">
-                            <div class="highlight-icon"><i class="fa-brands fa-react"></i></div>
+                            <div class="highlight-icon"><i class="fa-brands fa-react" style="color: #61dafb"></i></div>
                             <div>
                                 <strong>React / Next.js</strong>
                                 <span>Component-based, SSR, fast SPAs</span>
                             </div>
                         </div>
                         <div class="highlight-item">
-                            <div class="highlight-icon"><i class="fa-solid fa-server"></i></div>
+                            <div class="highlight-icon"><i class="fa-solid fa-server" style="color: #10b981"></i></div>
                             <div>
                                 <strong>Node.js / Python / Flask</strong>
                                 <span>APIs, authentication, backend logic</span>
                             </div>
                         </div>
                         <div class="highlight-item">
-                            <div class="highlight-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                            <div class="highlight-icon"><i class="fa-solid fa-cloud-arrow-up" style="color: #8b5cf6"></i></div>
                             <div>
                                 <strong>Database & Deployment</strong>
                                 <span>PostgreSQL, Vercel, Render, WordPress</span>

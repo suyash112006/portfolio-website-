@@ -149,33 +149,39 @@ export default function Hero() {
 
           {/* LEFT COLUMN */}
           <div>
-            <div className="mb-6 text-[12px] font-bold tracking-[0.2em] text-cyan-400">
-              01 / WEB DEVELOPMENT
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="mb-6 text-[12px] font-bold tracking-[0.2em] text-cyan-400">
+                01 / WEB DEVELOPMENT
+              </div>
 
-            <div className="flex flex-col justify-start lg:h-[200px]">
-              <h1 className="text-3xl font-extrabold leading-[1.15] text-white sm:text-4xl lg:text-[40px] xl:text-[46px]">
-                I Build Modern
-                <br />
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
-                  Websites &amp; Applications
-                </span>
-              </h1>
+              <div className="flex flex-col justify-start lg:h-[200px]">
+                <h1 className="text-3xl font-extrabold leading-[1.15] text-white sm:text-4xl lg:text-[40px] xl:text-[46px]">
+                  I Build Modern
+                  <br />
+                  <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+                    Websites &amp; Applications
+                  </span>
+                </h1>
 
-              <p className="mt-6 max-w-lg text-[17px] leading-relaxed text-gray-400">
-                High-performance websites, SaaS platforms, and web applications built with modern technologies for exceptional user experiences.
-              </p>
-            </div>
+                <p className="mt-6 max-w-lg text-[17px] leading-relaxed text-gray-400">
+                  High-performance websites, SaaS platforms, and web applications built with modern technologies for exceptional user experiences.
+                </p>
+              </div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a href="/index.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] w-fit">
-                View My Work <ArrowRight className="h-4 w-4" />
-              </a>
-              <button className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-gray-200 transition-colors hover:bg-white/10">
-                <Play className="h-4 w-4 fill-cyan-400 text-cyan-400" />
-                Watch Showreel
-              </button>
-            </div>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a href="/index.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] w-fit">
+                  View My Work <ArrowRight className="h-4 w-4" />
+                </a>
+                <button className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-gray-200 transition-colors hover:bg-white/10">
+                  <Play className="h-4 w-4 fill-cyan-400 text-cyan-400" />
+                  Watch Showreel
+                </button>
+              </div>
+            </motion.div>
 
             {/* Browser mockup */}
             <motion.div
@@ -417,36 +423,42 @@ export default function Hero() {
 
           {/* RIGHT COLUMN */}
           <div>
-            <div className="mb-6 text-[12px] font-bold tracking-[0.2em] text-purple-400">
-              02 / AI AUTOMATION &amp; AI AGENTS
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="mb-6 text-[12px] font-bold tracking-[0.2em] text-purple-400">
+                02 / AI AUTOMATION &amp; AI AGENTS
+              </div>
 
-            <div className="flex flex-col justify-start lg:h-[200px]">
-              <h1 className="text-3xl font-extrabold leading-[1.15] text-white sm:text-4xl lg:text-[40px] xl:text-[46px]">
-                I Automate Workflows
-                <br />
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  with AI Agents
-                </span>
-              </h1>
+              <div className="flex flex-col justify-start lg:h-[200px]">
+                <h1 className="text-3xl font-extrabold leading-[1.15] text-white sm:text-4xl lg:text-[40px] xl:text-[46px]">
+                  I Automate Workflows
+                  <br />
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                    with AI Agents
+                  </span>
+                </h1>
 
-              <p className="mt-6 max-w-lg text-[17px] leading-relaxed text-gray-400">
-                Intelligent automation, AI agents, and integrations that save time, reduce manual work, and scale your business operations.
-              </p>
-            </div>
+                <p className="mt-6 max-w-lg text-[17px] leading-relaxed text-gray-400">
+                  Intelligent automation, AI agents, and integrations that save time, reduce manual work, and scale your business operations.
+                </p>
+              </div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <button className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-fuchsia-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
-                Explore Automations <ArrowRight className="h-4 w-4" />
-              </button>
-              <button className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-gray-200 transition-colors hover:bg-white/10">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-                </span>
-                Live Demo
-              </button>
-            </div>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <button className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-fuchsia-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
+                  Explore Automations <ArrowRight className="h-4 w-4" />
+                </button>
+                <button className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-gray-200 transition-colors hover:bg-white/10">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                  </span>
+                  Live Demo
+                </button>
+              </div>
+            </motion.div>
 
             {/* Workflow card */}
             <motion.div

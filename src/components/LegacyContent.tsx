@@ -347,7 +347,7 @@ export default function LegacyContent() {
                         </div>
                         <div className="form-group">
                             <label htmlFor="cmessage">Your Message</label>
-                            <textarea id="cmessage" name="message" rows="5" placeholder="Tell me about your project, timeline, and budget..." required={true}></textarea>
+                            <textarea id="cmessage" name="message" rows={5} placeholder="Tell me about your project, timeline, and budget..." required={true}></textarea>
                         </div>
                         <button type="submit" className="btn btn-primary w-full" id="submitBtn">
                             <span>Send Message</span>
