@@ -447,7 +447,7 @@ export default function Hero() {
               </div>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a href="/ai-automation.html" className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-fuchsia-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
+                <a href="/ai-automation.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-500 to-fuchsia-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
                   Explore Automations <ArrowRight className="h-4 w-4" />
                 </a>
                 <button className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-gray-200 transition-colors hover:bg-white/10">
