@@ -741,7 +741,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- CONTACT FORM EMAILJS INTEGRATION ----
     // Initialize EmailJS
     if(typeof emailjs !== 'undefined') {
-        emailjs.init("dGtjmGoKng8f82kI6"); // Testing with capital 'I' instead of 'l'
+        emailjs.init("dGtjmGoKng8f82kI6");
     }
 
     const contactForm = document.getElementById('contactForm');
@@ -787,6 +787,49 @@ document.addEventListener('DOMContentLoaded', () => {
                     formError.classList.add('show');
                     console.error('EmailJS Error:', error);
                 });
+        });
+    }
+
+    // ---- MOBILE EXPERIENCE BANNER ----
+    const mobileBanner = document.getElementById('mobileBanner');
+    const btnContinue = document.getElementById('mobileBannerContinue');
+    const btnDismiss = document.getElementById('mobileBannerDismiss');
+
+    if (mobileBanner && btnContinue && btnDismiss) {
+        // Only trigger logic if window is small
+        if (window.innerWidth <= 768) {
+            const hideUntil = localStorage.getItem('hideMobileBannerUntil');
+            const sessionHidden = sessionStorage.getItem('mobileBannerSessionHidden');
+            const now = new Date().getTime();
+
+            if ((!hideUntil || now > parseInt(hideUntil)) && !sessionHidden) {
+                mobileBanner.style.display = 'block';
+                // Slight delay to allow CSS transition to kick in
+                setTimeout(() => {
+                    mobileBanner.classList.add('show');
+                }, 100);
+            }
+        }
+
+        const closeBanner = () => {
+            mobileBanner.classList.remove('show');
+            setTimeout(() => {
+                mobileBanner.style.display = 'none';
+            }, 400);
+        };
+
+        // Continue: Hide just for this session
+        btnContinue.addEventListener('click', () => {
+            sessionStorage.setItem('mobileBannerSessionHidden', 'true');
+            closeBanner();
+        });
+
+        // Don't show again: Hide for 24 hours
+        btnDismiss.addEventListener('click', () => {
+            const twentyFourHours = 24 * 60 * 60 * 1000;
+            const hideUntil = new Date().getTime() + twentyFourHours;
+            localStorage.setItem('hideMobileBannerUntil', hideUntil.toString());
+            closeBanner();
         });
     }
 

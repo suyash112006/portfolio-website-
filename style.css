@@ -2201,3 +2201,49 @@ body.no-scroll .navbar {
     .case-study-col h4 { font-size: 1rem; }
     .case-study-col p { font-size: 0.95rem; }
 }
+
+/* Mobile Experience Banner */
+.mobile-banner {
+    position: fixed;
+    bottom: -200px;
+    left: 10px;
+    right: 10px;
+    background: rgba(17, 17, 27, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: none;
+}
+.mobile-banner.show {
+    bottom: 10px;
+}
+.mobile-banner-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.mobile-banner-content i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-top: 4px;
+}
+.mobile-banner-content p {
+    font-size: 0.9rem;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.5;
+}
+.mobile-banner-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.mobile-banner-actions .btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
