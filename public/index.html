@@ -52,6 +52,53 @@
             color: transparent;
             animation: colorFlow 12s ease-in-out infinite;
         }
+
+        /* Orbit ring animations */
+        .hero-orbit-wrap {
+            position: absolute;
+            inset: -30px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-orbit-svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Ring 1 – blue arc, slow CW */
+        .arc-ring-1 { animation: spin-cw 14s linear infinite; transform-origin: center; }
+        /* Ring 2 – purple arc, medium CCW */
+        .arc-ring-2 { animation: spin-ccw 9s linear infinite; transform-origin: center; }
+        /* Ring 3 – cyan arc, fast CW */
+        .arc-ring-3 { animation: spin-cw 6s linear infinite; transform-origin: center; }
+
+        @keyframes spin-cw  { from { transform: rotate(0deg);   } to { transform: rotate(360deg);  } }
+        @keyframes spin-ccw { from { transform: rotate(0deg);   } to { transform: rotate(-360deg); } }
+
+        /* Outer orbit dot */
+        .hero-orbit-ring {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border-radius: 50%;
+            animation: spin-cw 20s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-orbit-dot {
+            position: absolute;
+            top: 50%;
+            left: -4px;
+            width: 8px;
+            height: 8px;
+            background-color: #60a5fa;
+            border-radius: 50%;
+            box-shadow: 0 0 15px 4px rgba(96, 165, 250, 0.6);
+            transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
@@ -146,6 +193,53 @@
             <div class="hero-visual reveal delay-2">
                 <div class="hero-card-wrapper">
                     <div class="hero-glow-ring"></div>
+                    <!-- Animated arc rings around image -->
+                    <div class="hero-orbit-wrap">
+                        <!-- Ring 1: blue glowing arc -->
+                        <svg class="hero-orbit-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="48" stroke="rgba(96,165,250,0.08)" stroke-width="0.5"/>
+                            <circle class="arc-ring-1" cx="50" cy="50" r="48"
+                                stroke="url(#blueArc)" stroke-width="1.5"
+                                stroke-dasharray="30 270" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="blueArc" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#60a5fa" stop-opacity="0"/>
+                                    <stop offset="50%" stop-color="#60a5fa" stop-opacity="1"/>
+                                    <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <!-- Ring 2: purple arc, slightly inside -->
+                        <svg class="hero-orbit-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="44" stroke="rgba(168,85,247,0.08)" stroke-width="0.5"/>
+                            <circle class="arc-ring-2" cx="50" cy="50" r="44"
+                                stroke="url(#purpleArc)" stroke-width="1.5"
+                                stroke-dasharray="20 256" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="purpleArc" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#a855f7" stop-opacity="0"/>
+                                    <stop offset="50%" stop-color="#c084fc" stop-opacity="1"/>
+                                    <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <!-- Ring 3: cyan arc, outermost -->
+                        <svg class="hero-orbit-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="arc-ring-3" cx="50" cy="50" r="49"
+                                stroke="url(#cyanArc)" stroke-width="1"
+                                stroke-dasharray="12 294" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="cyanArc" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+                                    <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="hero-orbit-ring">
+                        <div class="hero-orbit-dot"></div>
+                    </div>
                     <div class="hero-img-card">
                         <img src="hero_custom.png" alt="Suyash - Full Stack Developer" fetchpriority="high">
                         <div class="hero-img-overlay"></div>
@@ -378,6 +472,19 @@
                     <h3>Deployment & Hosting</h3>
                     <p>Secure, optimized deployment to Vercel, Render, or custom servers. Live in hours, not days.</p>
                     <div class="service-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+                <!-- AI Automation Special Card -->
+                <div class="service-card-v2 reveal" style="border-color:rgba(168,85,247,0.4); background: rgba(168,85,247,0.05); grid-column: 1 / -1; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+                    <div style="display:flex; align-items:center; gap:20px; flex:1;">
+                        <div class="service-icon-wrap" style="--svc-color:#a855f7; flex-shrink:0;"><i class="fa-solid fa-robot"></i></div>
+                        <div>
+                            <h3 style="font-size:1.2rem;">AI Automation &amp; AI Agents <span style="font-size:11px; background:linear-gradient(135deg,#a855f7,#ec4899); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; font-weight:700; letter-spacing:0.1em;">NEW</span></h3>
+                            <p style="max-width:600px;">Build intelligent AI agents and workflow automations that run 24/7. From lead gen to customer support — I automate the repetitive so you can focus on growth.</p>
+                        </div>
+                    </div>
+                    <a href="ai-automation.html" class="btn btn-primary" style="flex-shrink:0; white-space:nowrap;">
+                        Explore AI Automation <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
