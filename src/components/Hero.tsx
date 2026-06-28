@@ -483,8 +483,8 @@ export default function Hero() {
                 <div className="flex items-center justify-between gap-0">
                   {/* Card: Trigger */}
                   <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-green-500/40 bg-black/70 p-3 shadow-[0_0_20px_rgba(34,197,94,0.2)] backdrop-blur-md">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-green-500/15 text-green-400">
+                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-green-500/70 bg-[#0a0a0a]/90 p-3 backdrop-blur-md">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-current bg-green-500/20 text-green-400 shadow-[0_0_15px_rgba(34,197,94,0.6)]">
                       <Zap className="h-4 w-4 fill-current" />
                     </div>
                     <div>
@@ -506,8 +506,8 @@ export default function Hero() {
 
                   {/* Card: AI Agent */}
                   <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.6 }}
-                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-purple-500/40 bg-black/70 p-3 shadow-[0_0_20px_rgba(168,85,247,0.2)] backdrop-blur-md">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-purple-500/15 text-purple-400">
+                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-purple-500/70 bg-[#0a0a0a]/90 p-3 backdrop-blur-md">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-current bg-purple-500/20 text-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.6)]">
                       <Bot className="h-4 w-4" />
                     </div>
                     <div>
@@ -529,8 +529,8 @@ export default function Hero() {
 
                   {/* Card: Decision */}
                   <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.8 }}
-                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-orange-500/40 bg-black/70 p-3 shadow-[0_0_20px_rgba(249,115,22,0.2)] backdrop-blur-md">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-orange-500/15 text-orange-400">
+                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-orange-500/70 bg-[#0a0a0a]/90 p-3 backdrop-blur-md">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-current bg-orange-500/20 text-orange-400 shadow-[0_0_15px_rgba(249,115,22,0.6)]">
                       <Diamond className="h-4 w-4" />
                     </div>
                     <div>
@@ -575,8 +575,8 @@ export default function Hero() {
                 <div className="flex items-center justify-between gap-0">
                   {/* Card: Email */}
                   <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 1.2 }}
-                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-blue-500/40 bg-black/70 p-3 shadow-[0_0_20px_rgba(59,130,246,0.2)] backdrop-blur-md">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-500/15 text-blue-400">
+                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-blue-500/70 bg-[#0a0a0a]/90 p-3 backdrop-blur-md">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-current bg-blue-500/20 text-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.6)]">
                       <Mail className="h-4 w-4" />
                     </div>
                     <div>
@@ -590,8 +590,8 @@ export default function Hero() {
 
                   {/* Card: Google Sheets */}
                   <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 1.4 }}
-                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-green-500/40 bg-black/70 p-3 shadow-[0_0_20px_rgba(34,197,94,0.2)] backdrop-blur-md">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-green-500/15 text-green-400">
+                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-green-500/70 bg-[#0a0a0a]/90 p-3 backdrop-blur-md">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-current bg-green-500/20 text-green-400 shadow-[0_0_15px_rgba(34,197,94,0.6)]">
                       <Table className="h-4 w-4" />
                     </div>
                     <div>
@@ -605,8 +605,8 @@ export default function Hero() {
 
                   {/* Card: CRM */}
                   <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 1.6 }}
-                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-pink-500/40 bg-black/70 p-3 shadow-[0_0_20px_rgba(236,72,153,0.2)] backdrop-blur-md">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-pink-500/15 text-pink-400">
+                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-pink-500/70 bg-[#0a0a0a]/90 p-3 backdrop-blur-md">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-current bg-pink-500/20 text-pink-400 shadow-[0_0_15px_rgba(236,72,153,0.6)]">
                       <UserPlus className="h-4 w-4" />
                     </div>
                     <div>
@@ -657,8 +657,8 @@ export default function Hero() {
                 <div className="flex items-center justify-center gap-0">
                   {/* Card: WhatsApp */}
                   <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 1.8 }}
-                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-green-500/40 bg-black/70 p-3 shadow-[0_0_20px_rgba(34,197,94,0.2)] backdrop-blur-md">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-green-500/15 text-green-400">
+                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-green-500/70 bg-[#0a0a0a]/90 p-3 backdrop-blur-md">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-current bg-green-500/20 text-green-400 shadow-[0_0_15px_rgba(34,197,94,0.6)]">
                       <MessageCircle className="h-4 w-4" />
                     </div>
                     <div>
@@ -680,8 +680,8 @@ export default function Hero() {
 
                   {/* Card: Completed */}
                   <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 2.0 }}
-                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-purple-500/40 bg-black/70 p-3 shadow-[0_0_20px_rgba(168,85,247,0.2)] backdrop-blur-md">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-purple-500/15 text-purple-400">
+                    className="flex w-[130px] shrink-0 items-center gap-2.5 rounded-xl border border-purple-500/70 bg-[#0a0a0a]/90 p-3 backdrop-blur-md">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-current bg-purple-500/20 text-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.6)]">
                       <CheckCircle2 className="h-4 w-4" />
                     </div>
                     <div>

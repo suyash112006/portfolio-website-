@@ -1,4 +1,6 @@
+"use client";
 import { Zap, Globe, Bot, Rocket, Atom, Wind, Feather, Sparkles, Link2, GitBranch } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const bottomItems = [
   { dot: true, title: 'Available', subtitle: 'New Projects', icon: null, color: '' },
@@ -19,7 +21,13 @@ export default function TrustBar() {
   return (
     <div className="mx-auto max-w-[1600px] px-6 pb-16 lg:px-12">
       {/* ── NEW TECH BADGES ROW ── */}
-      <div className="mb-12 grid gap-y-6 lg:grid-cols-2 lg:gap-x-16 xl:gap-x-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mb-12 grid gap-y-6 lg:grid-cols-2 lg:gap-x-16 xl:gap-x-24"
+      >
         {/* Left Side (Web Dev) */}
         <div className="flex flex-wrap gap-2.5">
           <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-white/10">
@@ -67,9 +75,15 @@ export default function TrustBar() {
             Make.com
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#030303] shadow-2xl">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#030303] shadow-2xl"
+      >
         {/* Subtle premium background glow */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-50" />
 
@@ -95,7 +109,7 @@ export default function TrustBar() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
